@@ -2,7 +2,7 @@
   "name"              : "PWA ChatApp",
   "short_name"        : "ChatApp",
   "description"       : "An example PWA ChatApp",
-  "start_url"         : "https://vuechatapp-8a8d0.firebaseapp.com/#/",
+  "start_url"         : ".",
   "display"           : "standalone",
   "orientation"       : "any",
   "background_color"  : "#0be876",

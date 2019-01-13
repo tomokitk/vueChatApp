@@ -23,9 +23,8 @@
     <form action="" @submit.prevent="doSend" class="form">
       <textarea
         v-model="input"
-        :disabled="!user.uid"
-        @keydown.enter.exact.prevent="doSend"></textarea>
-      <button type="submit" :disabled="!user.uid" class="send-button">Send</button>
+        :disabled="!user.uid"></textarea>
+      <button type="submit" :disabled="!user.uid" class="send-button" v-on:click.prevent="doSend">送信</button>
     </form>
   </div>
 </template>
@@ -57,10 +56,10 @@ export default {
       if (user) {
         this.chat = []
         // message 以下に追加情報があった際に追加
-        refMessage.limitToLast(10).on('child_added', this.childAdded)
+        refMessage.on('child_added', this.childAdded)
       } else {
         // message に変更があったときのハンドラを解除
-        refMessage.limitToLast(10).off('child_added', this.childAdded)
+        refMessage.off('child_added', this.childAdded)
       }
     })
   },
