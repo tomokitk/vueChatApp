@@ -22,7 +22,7 @@ export default {
   methods: {
     doLogin () {
       const provider = new firebase.auth.GoogleAuthProvider()
-      firebase.auth().signInWithPopup(provider)
+      firebase.auth().signInWithRedirect(provider)
         .catch(error => alert('🤕' + error.message))
         .then(data => console.log(data.user, data.credential.accessToken))
       this.$router.push({name: 'chat', params: { name: this.name }})

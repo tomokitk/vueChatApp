@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="theme-color" content="#0be876">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="manifest" href="static/manifest.json">
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
+    integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
+    crossorigin="anonymous"></script>
     <script>
       window.addEventListener('load', function() {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register("/serviceWorker.js", {scope: './'})
+          navigator.serviceWorker.register("static/serviceWorker.js")
             .then(function(registration) {
+              console.log(registration);
               console.log("serviceWorker registed.");
             }).catch(function(error) {
               console.warn("serviceWorker error.", error);

@@ -115,11 +115,19 @@ export default {
   margin-bottom: 1em;
   padding: 0.4em 0.8em;
   color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:10;
 }
 .content {
+  padding-top:10px;
   margin: 0 auto;
+  margin-top:15%;
   padding: 0 10px;
   max-width: 600px;
+  height:auto;
 }
 .form {
   position: fixed;
@@ -213,6 +221,9 @@ a {
       color: #fff;
       position: relative;
       margin: 0 0 0 45%;
+  }
+  .content {
+    margin-top: 45%;
   }
 }
 

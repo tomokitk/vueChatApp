@@ -2,7 +2,7 @@
   "name"              : "PWA ChatApp",
   "short_name"        : "ChatApp",
   "description"       : "An example PWA ChatApp",
-  "start_url"         : ".",
+  "start_url"         : "/index.html",
   "display"           : "standalone",
   "orientation"       : "any",
   "background_color"  : "#0be876",
