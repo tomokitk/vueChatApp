@@ -2,7 +2,7 @@
   "name"              : "PWA ChatApp",
   "short_name"        : "ChatApp",
   "description"       : "An example PWA ChatApp",
-  "start_url"         : "/index.html",
+  "start_url"         : "/dist/index.html",
   "display"           : "standalone",
   "orientation"       : "any",
   "background_color"  : "#0be876",
@@ -48,5 +48,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "gcm_sender_id": "615704266448"
 }
